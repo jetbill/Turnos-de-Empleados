@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface EmpleadoService  {
     Empleado save(Empleado empleado);
+    Empleado edit(Empleado empleado);
     Iterable<Empleado> finAll();
     Optional<Empleado> findbyId(Long id);
     void deleteById(Long id);

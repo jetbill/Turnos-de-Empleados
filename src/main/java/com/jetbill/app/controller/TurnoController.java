@@ -31,13 +31,13 @@ import java.util.Optional;
 @RequestMapping("/api/turnos")
 public class TurnoController {
     private TurnoService service;
-    private EmpleadoRepository empService;
+
     private Logger logger = LoggerFactory.getLogger(TurnoController.class);
 
     @Autowired
-    public TurnoController(TurnoService service,EmpleadoRepository empService) {
+    public TurnoController(TurnoService service) {
         this.service = service;
-        this.empService = empService;
+
     }
 
     @GetMapping
@@ -123,7 +123,7 @@ public class TurnoController {
         turnoEditado.setHsalida(turnoNew.getHsalida());
         turnoEditado.setEmpleado(turnoNew.getEmpleado());
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(turnoEditado));
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.edit(turnoEditado));
     }
 
     @DeleteMapping(value = "/{id}")

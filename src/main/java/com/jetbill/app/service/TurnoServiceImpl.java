@@ -49,6 +49,12 @@ public class TurnoServiceImpl implements TurnoService {
 
     @Override
     @Transactional
+    public Turno edit(Turno turno) {
+        return repository.save(turno);
+    }
+
+    @Override
+    @Transactional
     public Optional<Turno> findById(Long id) {
         Optional<Turno> turOp = repository.findById(id);
         if (!turOp.isPresent()) {
@@ -83,8 +89,5 @@ public class TurnoServiceImpl implements TurnoService {
         return repository.findAllWithHentradaBefore(hentrada, hsalida);
     }
 
-    /*@Override
-    public Empleado findEmpleadoById(Long id) {
-        return repository.findEmpleadoById(id);
-    }*/
+
 }

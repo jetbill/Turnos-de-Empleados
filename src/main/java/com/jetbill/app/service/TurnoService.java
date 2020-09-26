@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface TurnoService {
     Iterable<Turno> findAll();
     Turno save(Turno turno);
+    Turno edit(Turno turno);
     Optional<Turno> findById(Long id);
     Iterable<Turno>findbyEmpleado(int identificacion);
     Iterable<Turno> findByDay(String dia);

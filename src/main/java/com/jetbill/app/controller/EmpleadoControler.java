@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -74,7 +74,7 @@ public class EmpleadoControler {
         empleadoEditado.setNombre(empleadoNew.getNombre());
         empleadoEditado.setApellido(empleadoNew.getApellido());
         empleadoEditado.setIdentificacion(empleadoNew.getIdentificacion());
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(empleadoEditado));
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.edit(empleadoEditado));
     }
     
     @GetMapping("/{id}")

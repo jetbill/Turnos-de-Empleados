@@ -34,6 +34,11 @@ public class EmpleadoServiceImpl implements EmpleadoService {
     }
 
     @Override
+    public Empleado edit(Empleado empleado) {
+        return repository.save(empleado);
+    }
+
+    @Override
     public Iterable<Empleado> finAll() {
         Iterable<Empleado> empleados = repository.findAll();
         if(!empleados.iterator().hasNext()){

@@ -50,12 +50,12 @@ _por default se ejecuta en el puerto 8080_
 
 _Dentro del proyecto se encuentra un archivo import.sql que carga datos de prueba a la base de datos_
 
-### Probar el endpoint de empleados🔩
+### PROBAR EL ENDPOINT DE EMPLEADOS🔩
 
 _Listar empleados_
 
 ```
-ingresa esta url en postman: http://localhost:8080/api/empleado y selecciona el metodo get
+ingresa esta url en postman: http://localhost:8080/api/empleado y selecciona el metodo GET
 ```
 ```
 debera retornar una lista de empleados
@@ -64,7 +64,7 @@ debera retornar una lista de empleados
 _Buscar por id_
 
 ```
-ingresa esta url en postman: http://localhost:8080/api/empleado/1  y selecciona el metodo get
+ingresa esta url en postman: http://localhost:8080/api/empleado/1  y selecciona el metodo GET
 ```
 ```
 debera retornar el empleado con id 1
@@ -80,7 +80,7 @@ debera retornar el empleado con id 1
 _Registar empleado_
 
 ```
-ingresa esta url en postman: http://localhost:8080/api/empleado  y selecciona el metodo post
+ingresa esta url en postman: http://localhost:8080/api/empleado  y selecciona el metodo POST
 ```
 
 ```
@@ -110,7 +110,7 @@ debera retornar los datos del nuevo empleado
 _Editar empleado_
 
 ```
-ingresa esta url en postman: http://localhost:8080/api/empleado/6  y selecciona el metodo put
+ingresa esta url en postman: http://localhost:8080/api/empleado/6  y selecciona el metodo PUT
 ```
 
 ```
@@ -127,12 +127,19 @@ y envia un json asi:
 
 ```
 debera retornar el empleado con el nuevo apellido
+
+{
+    "id": 6,
+    "nombre": "Jorge",
+    "apellido": "Morales",
+    "identificacion": 25154853
+}
 ```
 
 _Elimar empleado_
 
 ```
-ingresa esta url en postman: http://localhost:8080/api/empleado/6  y selecciona el metodo delete
+ingresa esta url en postman: http://localhost:8080/api/empleado/6  y selecciona el metodo DELETE
 ```
 
 
@@ -140,34 +147,31 @@ ingresa esta url en postman: http://localhost:8080/api/empleado/6  y selecciona 
 
 ```
 debera retornar un mensaje confirmando la eliminacion
+
+{
+    "mensaje": "empleado 6 eliminado con exito!"
+}
 ```
 
 
-### Probar el endpoint de turnos🔩
+### PROBAR EL ENDPOINT DE TURNOS🔩
 
 
 _Listar Turnos_
 
 ```
-ingresa esta url en postman: http://localhost:8080/api/turnos y selecciona el metodo get
+ingresa esta url en postman: http://localhost:8080/api/turnos y selecciona el metodo GET
 ```
 ```
 debera retornar una lista de turnos registrados
 ```
 
-_Buscar por id_
 
-```
-ingresa esta url en postman: http://localhost:8080/api/turnos/1  y selecciona el metodo get
-```
-```
-debera retornar el turno con id 1
-```
 
 _Registar turno_
 
 ```
-ingresa esta url en postman: http://localhost:8080/api/turnos  y selecciona el metodo post
+ingresa esta url en postman: http://localhost:8080/api/turnos  y selecciona el metodo POST
 ```
 
 ```
@@ -183,6 +187,7 @@ y envia un json asi:
 ```
 ```
 debera retornar los datos del nuevo turno
+"mensaje": "Se ha registrado exitosamente"
 ```
 
 _Buscar turno por dia_
@@ -196,7 +201,7 @@ ingresa esta url en postman: http://localhost:8080/api/turnos/dias/lunes  y sele
 debera retornar los turnos del lunes
 ```
 
-_Buscar turno del empleado_
+_Buscar turno del empleado por identificacion_
 
 ```
 ingresa esta url en postman: http://localhost:8080/api/turnos/cedula/73196540  y selecciona el metodo get
@@ -235,7 +240,7 @@ _Herramientas utlizadas_
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **William Renteria** - *Creador del proyecto* - [jetbill](https://github.com/jetbill/Turnos-de-Empleados) - (william.billmx@gmail.com)
+* **William Renteria Medrano** - *Creador del proyecto* - [jetbill](https://github.com/jetbill/Turnos-de-Empleados) - (william.billmx@gmail.com)
 
 
 
